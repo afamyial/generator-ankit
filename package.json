@@ -1,0 +1,15 @@
+{
+  "name": "generator-ankit",
+  "version": "1.0.0",
+  "description": "A test generator to learn using yeoman",
+  "files": [
+    "app",
+    "router"
+  ],
+  "keywords": ["yeoman-generator"],
+  "dependencies": {
+    "yeoman-generator": "^0.20.2"
+  },
+  "author": "Ankit Famyial",
+  "license": "MIT"
+}
