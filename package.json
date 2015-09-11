@@ -1,19 +1,19 @@
 {
-  "//": "name must be prefixed by 'generator-'",
+  "//": "Keywords property must contain 'yeoman-generator'",
   "name": "generator-ankit",
   "version": "1.0.0",
   "description": "A test generator to learn using yeoman",
-
-  "//": "Files must be an array of files and directories that is used by your generator.",
   "files": [
     "app",
     "router"
   ],
-
-  "//": "Keywords property must contain 'yeoman-generator'",
-  "keywords": ["yeoman-generator"],
+  "keywords": [
+    "yeoman-generator"
+  ],
   "dependencies": {
-    "yeoman-generator": "^0.20.2"
+    "lodash": "^3.10.1",
+    "yeoman-generator": "^0.20.2",
+    "yosay": "^1.0.4"
   },
   "author": "Ankit Famyial",
   "license": "MIT"

@@ -16,13 +16,36 @@ module.exports = generators.Base.extend({
     this.option('coffee'); // This method adds support for a `--coffee` flag
   },
 
-  // Methods added to prototype are run in sequence once generator is called.
+  //  Methods added to prototype are run in sequence once generator is called.
   method1: function () {
     console.log('method 1 just ran');
   },
 
   method2: function () {
     console.log('method 2 just ran');
-  }
+  },
 
+  // Adding priorities to group multiple methods to be run together in a queue
+  // Available priorities are :- initializing, prompting, configuring, default, writing, conflicts, install and end
+  prompting: function() {
+    var done = this.async();
+    this.prompt([
+      // Prompt for the user name
+      {
+        type: 'input',
+        name: 'name',
+        message: 'Your name',
+        default: 'Ankit',
+        store: true
+      }
+    ], function(answers) {
+      this.log(say('How you doin!'));
+      done();
+    }.bind(this));
+  },
+
+  // End
+  end: function() {
+    this.log(say('Bye!'));
+  }
 });
